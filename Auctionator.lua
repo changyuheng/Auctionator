@@ -5127,7 +5127,7 @@ function Atr_CalcUndercutPrice (price)
   if  (price >   10000) then return roundPriceDown (price, AUCTIONATOR_SAVEDVARS._10000); end;
   if  (price >    2000) then return roundPriceDown (price, AUCTIONATOR_SAVEDVARS._2000);  end;
   if  (price >     500) then return roundPriceDown (price, AUCTIONATOR_SAVEDVARS._500);   end;
-  if  (price >       0) then return math.floor (price - 1); end;
+  if  (price >       0) then return math.floor (price); end;
 
   return 0;
 end
